@@ -1,0 +1,153 @@
+body {
+    background: black;
+    color: #dedede;
+}
+
+.App {
+    text-align: center;
+    padding: 5%;
+}
+
+.App-title {
+    font-size: 26px;
+}
+
+
+/* Profile component */
+
+.profile {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-info {
+    margin-left: 16px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 150px;
+    min-width: 150px;
+    height: 150px;
+    min-height: 150px;
+    border: 3px solid #fff;
+    border-radius: 75px;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: 26px;
+}
+
+.profile-followers {
+    color: #999;
+}
+
+.profile-followers,
+.profile-genres {
+    font-size: 16px;
+}
+
+
+/* Gallery component */
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1em;
+    justify-content: flex-start;
+}
+
+.gallery>* {
+    flex: 0;
+    flex-basis: 220px;
+}
+
+
+/* Track component */
+
+.track {
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 7px;
+    cursor: pointer;
+    height: 220px;
+    margin: 15px;
+    position: relative;
+}
+
+.track.active {
+    border-color: yellow;
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.25);
+}
+
+.track-toggle .pause {
+    display: none;
+}
+
+.track-toggle {
+    display: flex;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    font-size: 25px;
+    padding: 0;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.track-toggle>* {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 30px;
+    width: 60px;
+    height: 60px;
+    padding-top: 13px;
+    transform: translateY(-15%);
+}
+
+.track-toggle .play {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.track-toggle .pause {
+    color: yellow;
+    border: 1px solid yellow;
+}
+
+.track:hover .track-toggle .play {
+    opacity: 1;
+}
+
+.track.active .track-toggle .pause {
+    display: block;
+}
+
+.track.active .track-toggle .play {
+    display: none;
+}
+
+.track-title {
+    bottom: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 5px;
+}
+
+.track .track-name,
+.track .album-name {
+    font-weight: bold;
+}
+
+.track img {
+    width: 150px;
+    height: 150px;
+}
