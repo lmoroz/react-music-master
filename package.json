@@ -2,6 +2,7 @@
     "name": "react-music-master",
     "version": "0.1.0",
     "private": true,
+    "homepage": "./",
     "devDependencies": {
         "react-bootstrap": "^0.30.7",
         "react-scripts": "0.9.0"
