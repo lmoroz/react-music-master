@@ -84,6 +84,15 @@ body {
     box-shadow: 0 0 15px rgba(255, 255, 0, 0.25);
 }
 
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .track-toggle .pause {
     display: none;
 }
@@ -98,7 +107,7 @@ body {
     padding: 0;
     position: absolute;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     color: white;
 }
 
@@ -110,6 +119,7 @@ body {
     height: 60px;
     padding-top: 13px;
     transform: translateY(-15%);
+    margin-top: 50px;
 }
 
 .track-toggle .play {
@@ -150,4 +160,25 @@ body {
 .track img {
     width: 150px;
     height: 150px;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+
+.track.active img {
+    border: 1px solid yellow;
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.25);
+    border-radius: 50%;
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
